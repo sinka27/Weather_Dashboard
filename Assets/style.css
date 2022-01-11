@@ -18,3 +18,33 @@ img {
   float: right;
   margin-right:100px;
 }
+#info-section {
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+   
+  }
+
+  .form-control{
+      width: 250px;
+  }
+
+  .btn{
+    width: 250px;
+    font-size: 20px;
+    color: black;
+    background-color: rgb(101, 200, 224);
+  }
+.btn:hover{
+    background-color: rgb(63, 117, 168);
+}
+/* @media only screen and (max-width: 599px) {
+  .column {
+    margin: 2px;
+    padding: 0 20px 0 20px;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+} */
