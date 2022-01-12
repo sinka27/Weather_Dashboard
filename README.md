@@ -21,7 +21,7 @@ A web-app for checking the current weather and 5-day forecast for a city.
 *  Github source code: https://github.com/sinka27/Weather_Dashboard
 * Github deployed page: https://sinka27.github.io/Weather_Dashboard/
 ## Sample Video
-![A user searches for city and gets its current weather and 5 day forecast.](./WeatherDashboard.gif)
+![A user searches for city and gets its current weather and 5 day forecast.](./Assets/Images/WeatherDashboard.gif)
 
 
 ## Credits
