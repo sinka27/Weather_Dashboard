@@ -10,7 +10,7 @@ var cityFormEl=document.querySelector("#city-search-form");
 // Fetch weather api
 var getWeather = function(){
     var cityName = $("#cityInput").val();
-        fetch('http://api.openweathermap.org/data/2.5/weather?q='+cityName+'&units=imperial&APPID=ba0a6d61f2ea067651161c344b40f248')
+        fetch('https://api.openweathermap.org/data/2.5/weather?q='+cityName+'&units=imperial&APPID=ba0a6d61f2ea067651161c344b40f248')
         .then(function(response){
             response.json().then(function(data){
                 displayWeather(data, cityName);
