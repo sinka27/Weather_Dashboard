@@ -8,9 +8,10 @@ body {
   text-align: center;
   background-image: linear-gradient(
     to bottom right,
-    rgb(161, 229, 241),
-    rgb(248, 191, 210),
-    rgb(250, 179, 124)
+    rgb(130, 210, 235),
+    rgb(103, 174, 236),
+    rgb(241, 155, 163),
+    rgb(230, 103, 34)
   );
   color: black;
   border-bottom: 3px solid black;

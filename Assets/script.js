@@ -11,6 +11,9 @@ var cityFormEl = document.querySelector("#city-search-form");
 var getWeather = function () {
   var cityName = $("#cityInput").val();
   cities = JSON.parse(localStorage.getItem("cities"));
+  if(cities == null){
+      cities = [];
+  }
   if (!cities.includes(cityName)) {
     cities.push(cityName);
   }
@@ -191,14 +194,15 @@ var saveSearchedCities = function () {
 //Displaying past searched cities
 var pastSearchedCities = function () {
   var pastCities = JSON.parse(localStorage.getItem("cities"));
-  console.log(pastCities);
-  console.log(pastCities.length);
   $("#past-searched-cities").empty();
-  for (var i = 0; i < pastCities.length; i++) {
-    $("#past-searched-cities").append(
-      "<li class = 'listBtn list-group-item'>" + pastCities[i] + "</li>"
-    );
+  if(pastCities != null) {
+    for (var i = 0; i < pastCities.length; i++) {
+        $("#past-searched-cities").append(
+          "<li class = 'listBtn list-group-item'>" + pastCities[i] + "</li>"
+        );
+      }
   }
+  
   document.querySelectorAll(".listBtn").forEach((item) => {
     item.addEventListener("click", (event) => {
         var cityName = item.textContent;
