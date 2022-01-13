@@ -10,14 +10,17 @@ var cityFormEl=document.querySelector("#city-search-form");
 // Fetch weather api
 var getWeather = function(){
     var cityName = $("#cityInput").val();
-    cities.push(cityName);
+    if(!(cities.includes(cityName))){
+        cities.push(cityName);
+    }
+   
     saveSearchedCities();
         fetch('https://api.openweathermap.org/data/2.5/weather?q='+cityName+'&units=imperial&APPID=ba0a6d61f2ea067651161c344b40f248')
         .then(function(response){
             response.json().then(function(data){
                 displayWeather(data, cityName);
                 get5Day(cityName);
-                
+                pastSearchedCities();
 });
         });
     }
@@ -176,3 +179,14 @@ var display5Day = function(weather){
 var saveSearchedCities = function(){
     localStorage.setItem("cities", JSON.stringify(cities));
 };
+
+var pastSearchedCities = function(){
+    var pastCities = JSON.parse(localStorage.getItem("cities"));
+    console.log(pastCities);
+    console.log(pastCities.length);
+    $("#past-searched-cities").empty();
+    for(var i =0; i<pastCities.length; i++){
+        $("#past-searched-cities").append("<li>"+pastCities[i]+"</li>");
+    }
+}
+pastSearchedCities();
