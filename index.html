@@ -30,17 +30,21 @@
     <!-- JUMBOTRON -->
     <header class="jumbotron">
       <h1>Weather Dashboard</h1>
-      <!-- <img src="./Assets/Images/jumbotronimage.png" alt="weather" /> -->
     </header>
     <div id="info-section">
       <div class="form-group">
         <label for="cityInput">Search for a City:</label>
-        <input type="text" class="form-control" id="cityInput" aria-describedby="cityHelp" placeholder="Enter the name of the city"/>
+        <input
+          type="text"
+          class="form-control"
+          id="cityInput"
+          aria-describedby="cityHelp"
+          placeholder="Enter the name of the city"
+        />
       </div>
       <button class="btn btn-primary" id="search">Search</button>
       <div id="past-search-buttons">
-        <ul id="past-searched-cities" class="list-group">
-        </ul>
+        <ul id="past-searched-cities" class="list-group"></ul>
       </div>
     </div>
     <div id="main-section">
@@ -55,7 +59,7 @@
         <div class="d-flex" id="fiveday-container"></div>
       </div>
     </div>
-
+    
     <!-- Linking Script Files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
