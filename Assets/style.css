@@ -6,45 +6,79 @@ body {
 
 .jumbotron {
   text-align: center;
-  background-image: linear-gradient(to bottom right,rgb(178, 232, 241),rgb(101, 200, 224),rgb(63, 117, 168));
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(161, 229, 241),
+    rgb(248, 191, 210),
+    rgb(250, 179, 124)
+  );
   color: black;
   border-bottom: 3px solid black;
   padding: 0px;
 }
 
-img {
+/* img {
   height: 70px;
   width: 100px;
   float: right;
-  margin-right:100px;
-}
+  margin-right: 100px;
+} */
 #info-section {
-    padding: 20px;
-    font-size: 30px;
-    font-weight: bolder;
-   
-  }
-
-  .form-control{
-      width: 250px;
-  }
-
-  .btn{
-    width: 250px;
-    font-size: 20px;
-    color: black;
-    background-color: rgb(101, 200, 224);
-  }
-.btn:hover{
-    background-color: rgb(63, 117, 168);
+  float: left;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bolder;
+  width:20%;
+  
 }
-/* @media only screen and (max-width: 599px) {
-  .column {
+
+.form-control {
+  width: 250px;
+}
+#main-section{
+  float:right;
+  padding-left: 20px;
+  align-content: left;
+  width:80%;
+ 
+}
+#current-weather-container{
+width:40%
+}
+.btn {
+  width: 250px;
+  font-size: 20px;
+  color: black;
+  background-color: rgb(101, 200, 224);
+}
+.btn:hover {
+  background-color: rgb(63, 117, 168);
+}
+
+/* Assigning color code for UV Index */
+span.severe {
+  padding: 3px;
+  background-color: red;
+  color: white;
+}
+
+span.moderate {
+  padding: 3px;
+  background-color: yellow;
+}
+
+span.favorable {
+  padding: 3px;
+  background-color: green;
+  color: white;
+}
+/* @media only screen and (max-width: px) {
+  #info-section {
     margin: 2px;
     padding: 0 20px 0 20px;
   }
 
-  .card-content {
+  #main-section {
     padding: 20px;
   }
 } */
