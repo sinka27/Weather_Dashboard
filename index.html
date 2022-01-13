@@ -35,16 +35,13 @@
     <div id="info-section">
       <div class="form-group">
         <label for="cityInput">Search for a City:</label>
-        <input
-          type="text"
-          class="form-control"
-          id="cityInput"
-          aria-describedby="cityHelp"
-          placeholder="Enter the name of the city"
-        />
+        <input type="text" class="form-control" id="cityInput" aria-describedby="cityHelp" placeholder="Enter the name of the city"/>
       </div>
       <button class="btn btn-primary" id="search">Search</button>
-      <div id="past-search-buttons"></div>
+      <div id="past-search-buttons">
+        <ul id="past-searched-cities">
+        </ul>
+      </div>
     </div>
     <div id="main-section">
       <div id="current-forecast">
