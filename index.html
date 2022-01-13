@@ -30,7 +30,7 @@
     <!-- JUMBOTRON -->
     <header class="jumbotron">
       <h1>Weather Dashboard</h1>
-      <img src="./Assets/Images/jumbotronimage.png" alt="weather" />
+      <!-- <img src="./Assets/Images/jumbotronimage.png" alt="weather" /> -->
     </header>
     <div id="info-section">
       <div class="form-group">
@@ -46,16 +46,17 @@
       <button class="btn btn-primary" id="search">Search</button>
       <div id="past-search-buttons"></div>
     </div>
-
-    <div id="current-forecast">
-      <div>
-        <h2 id="searched-city"></h2>
-        <div id="current-weather-container" class="list-group"></div>
+    <div id="main-section">
+      <div id="current-forecast">
+        <div>
+          <h2 id="searched-city"></h2>
+          <div id="current-weather-container" class="list-group"></div>
+        </div>
       </div>
-    </div>
-    <div id="five-day-forecast">
-      <h2 id="forecast"></h2>
-      <div class="d-flex" id="fiveday-container"></div>
+      <div id="five-day-forecast">
+        <h2 id="forecast"></h2>
+        <div class="d-flex" id="fiveday-container"></div>
+      </div>
     </div>
 
     <!-- Linking Script Files -->
