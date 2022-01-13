@@ -10,12 +10,14 @@ var cityFormEl=document.querySelector("#city-search-form");
 // Fetch weather api
 var getWeather = function(){
     var cityName = $("#cityInput").val();
+    cities.push(cityName);
+    saveSearchedCities();
         fetch('https://api.openweathermap.org/data/2.5/weather?q='+cityName+'&units=imperial&APPID=ba0a6d61f2ea067651161c344b40f248')
         .then(function(response){
             response.json().then(function(data){
                 displayWeather(data, cityName);
                 get5Day(cityName);
-    
+                
 });
         });
     }
@@ -93,6 +95,7 @@ var displayUvIndex = function(index){
 
     if(index.value <=2){
         uvIndexValue.classList = "favorable"
+        
     }else if(index.value >2 && index.value<=8){
         uvIndexValue.classList = "moderate "
     }
@@ -131,12 +134,11 @@ var display5Day = function(weather){
        var forecastEl=document.createElement("div");
        forecastEl.classList = "card bg-primary text-light m-2";
 
-       //console.log(dailyForecast)
 
        //create date element
        var forecastDate = document.createElement("h5")
        forecastDate.textContent= moment.unix(dailyForecast.dt).format("MMM D, YYYY");
-       forecastDate.classList = "card-header text-center"
+       forecastDate.classList = "card-header text-center";
        forecastEl.appendChild(forecastDate);
 
        
@@ -151,14 +153,14 @@ var display5Day = function(weather){
        //create temperature span
        var forecastTempEl=document.createElement("span");
        forecastTempEl.classList = "card-body text-center";
-       forecastTempEl.textContent = dailyForecast.main.temp + " °F";
+       forecastTempEl.textContent = "Temperature: " + dailyForecast.main.temp + " °F";
 
         //append to forecast card
         forecastEl.appendChild(forecastTempEl);
 
        var forecastHumEl=document.createElement("span");
        forecastHumEl.classList = "card-body text-center";
-       forecastHumEl.textContent = dailyForecast.main.humidity + "  %";
+       forecastHumEl.textContent = "Humidity: " + dailyForecast.main.humidity + "  %";
 
        //append to forecast card
        forecastEl.appendChild(forecastHumEl);
@@ -169,3 +171,8 @@ var display5Day = function(weather){
     }
 
 }
+
+//Saving searched cities in local storage
+var saveSearchedCities = function(){
+    localStorage.setItem("cities", JSON.stringify(cities));
+};
